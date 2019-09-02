@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fetches a single book 1`] = `
+Object {
+  "data": Object {
+    "book": Object {
+      "author": "J.K. Rowling",
+      "id": "1",
+      "title": "Harry Potter and the Chamber of Secrets",
+    },
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`fetches an array of books 1`] = `
+Object {
+  "data": Object {
+    "books": Array [
+      Object {
+        "author": "J.K. Rowling",
+        "id": "1",
+        "title": "Harry Potter and the Chamber of Secrets",
+      },
+      Object {
+        "author": "Michael Crichton",
+        "id": "2",
+        "title": "Jurassic Park",
+      },
+    ],
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;
+
+exports[`returns null when no book is found 1`] = `
+Object {
+  "data": Object {
+    "book": null,
+  },
+  "errors": undefined,
+  "extensions": undefined,
+  "http": Object {
+    "headers": Headers {
+      Symbol(map): Object {},
+    },
+  },
+}
+`;

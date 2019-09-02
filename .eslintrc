@@ -1,0 +1,12 @@
+{
+  "extends": ["eslint:recommended", "plugin:jsdoc/recommended", "prettier"],
+  "env": {
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module"
+  }
+}
