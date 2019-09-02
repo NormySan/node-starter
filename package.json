@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon --watch ./src --exec babel-node ./src/index.js",
-    "build": "babel ./src --out-dir build",
+    "build": "babel ./src --source-maps --out-dir build",
     "test": "jest --watch"
   },
   "devDependencies": {
