@@ -8,7 +8,7 @@ import { getAuthorById } from '../../app/author/queries/getAuthorById';
  * @param {object} args The query arguments.
  * @param {string} args.id The ID of the author to get.
  *
- * @returns {Author[]} The
+ * @returns {Author|null} The found author or null if one was not found.
  */
 export function author(root, args) {
   const author = getAuthorById(parseInt(args.id, 10));

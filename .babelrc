@@ -1,4 +1,17 @@
 {
-  "presets": ["@babel/preset-env"],
-  "ignore": ["**/__tests__", "**/*.test.js"]
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": 10
+        }
+      }
+    ]
+  ],
+  "env": {
+    "production": {
+      "ignore": ["**/__tests__", "**/*.test.js"]
+    }
+  }
 }

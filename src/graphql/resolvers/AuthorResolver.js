@@ -30,6 +30,21 @@ export const AuthorResolver = {
   },
 
   /**
+   * Resolves the biography field on a author.
+   *
+   * @param {Author} author The author.
+   *
+   * @returns {string} The author ID.
+   */
+  biography(author) {
+    if (!author.biography) {
+      return '';
+    }
+
+    return author.biography;
+  },
+
+  /**
    * Resolves the books field on a author.
    *
    * @param {Author} author The author.

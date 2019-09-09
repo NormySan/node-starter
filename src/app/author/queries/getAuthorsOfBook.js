@@ -11,7 +11,7 @@ import { db } from '../../../database';
  */
 export function getAuthorsOfBook(book) {
   const stmt = db.prepare(`
-    SELECT * FROM authors
+    SELECT authors.* FROM authors
     LEFT JOIN authors_books
     ON authors.id = authors_books.author_id
     WHERE authors_books.book_id = :id

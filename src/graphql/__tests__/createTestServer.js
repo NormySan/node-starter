@@ -1,6 +1,7 @@
 import { ApolloServer } from 'apollo-server-express';
 
-import { resolvers, typeDefs } from '../../graphql';
+import { resolvers } from '../resolvers';
+import { typeDefs } from '../typeDefs';
 
 // Creates a new Apollo server that can be used for testing purposes.
 //

@@ -1,25 +1,4 @@
 """
-The book type represents a single book. This will be displayed as the
-description in the documentation for the book type.
-"""
-type Book {
-  id: ID!
-  title: String!
-  isbn: String!
-  authors: [Author]!
-}
-
-"""
-The author type represents a single author.
-"""
-type Author {
-  id: ID!
-  name: String!
-  biography: String!
-  books: [Book]!
-}
-
-"""
 The query type is the root of all queries and represents the first layer of
 available data to query.
 """
@@ -48,5 +27,28 @@ type Query {
   """
   Search for books.
   """
-  searchBooks(title: String, isbn: String): [Book]
+  searchBooks(title: String, isbn: ISBN): [Book]
+}
+
+scalar ISBN
+
+"""
+The book type represents a single book. This will be displayed as the
+description in the documentation for the book type.
+"""
+type Book {
+  id: ID!
+  title: String!
+  isbn: ISBN!
+  authors: [Author]!
+}
+
+"""
+The author type represents a single author.
+"""
+type Author {
+  id: ID!
+  name: String!
+  biography: String!
+  books: [Book]!
 }

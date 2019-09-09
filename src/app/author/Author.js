@@ -5,7 +5,7 @@ export class Author {
    * @param {object} values
    * @param {number} values.id
    * @param {string} values.name
-   * @param {string} values.biography
+   * @param {string|null} values.biography
    */
   constructor(values) {
     this.id = values.id;

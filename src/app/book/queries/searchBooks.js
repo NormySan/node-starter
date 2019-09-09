@@ -16,14 +16,18 @@ import { db } from '../../../database';
  * @returns {Book[]} An array of books matching the search parameters.
  */
 export function searchBooks(params) {
-  let query = 'SELECT books.* FROM books';
+  let query = 'SELECT books_search.* FROM books_search';
 
   if (params.title) {
-    query += ' WHERE books.title MATCH :title';
+    query += ' WHERE books_search.title MATCH :title';
   }
 
-  if (params.isbn) {
-    query += ' WHERE books.isbn = :isbn';
+  if (!params.title && params.isbn) {
+    query += ' WHERE books_search.isbn = :isbn';
+  }
+
+  if (params.title && params.isbn) {
+    query += ' AND books_search.isbn = :isbn';
   }
 
   query += ' ORDER BY rank';

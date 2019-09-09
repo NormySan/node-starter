@@ -1,4 +1,5 @@
 import { Book } from '../../app/book/Book';
+import { searchBooks as searchBooksQuery } from '../../app/book/queries/searchBooks';
 
 /**
  * Resolver for the book query field.
@@ -11,5 +12,17 @@ import { Book } from '../../app/book/Book';
  * @returns {Book[]} An array of books matching the search filters.
  */
 export function searchBooks(root, args) {
-  return [];
+  const params = {};
+
+  if (args.isbn) {
+    params.isbn = args.isbn;
+  }
+
+  if (args.title) {
+    params.title = args.title;
+  }
+
+  const books = searchBooksQuery(params);
+
+  return books;
 }
