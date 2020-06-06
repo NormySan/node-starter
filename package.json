@@ -35,7 +35,7 @@
     "validator": "^11.1.0"
   },
   "dependencies": {
-    "apollo-server-express": "^2.6.3",
+    "apollo-server-express": "^2.14.2",
     "better-sqlite3": "^5.4.0",
     "config": "^3.1.0",
     "dataloader": "^1.4.0",
